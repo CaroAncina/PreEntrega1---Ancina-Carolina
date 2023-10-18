@@ -8,11 +8,11 @@ Proyecto del curso de React JS de CoderHouse. Es un sitio Web que consta de 5 pa
 
 Creando el repositorio remoto:
 ```
-git clone [https://github.com/CaroAncina/ProyectoFinal-AncinaCarolina](https://github.com/CaroAncina/PreEntrega1---Ancina-Carolina.git)
+git clone https://github.com/CaroAncina/PreEntrega2-Ancina-Carolina
 ```
 Conecta el repositorio con el equipo local:
 ```
-git remote add origin [[https://github.com/CaroAncina/PreEntrega1---Ancina-Carolina]](https://github.com/CaroAncina/PreEntrega1---Ancina-Carolina.git)
+git remote add origin https://github.com/CaroAncina/PreEntrega2-Ancina-Carolina
 ```
 Trae los archivos del repositorio a GitHub
 ```
