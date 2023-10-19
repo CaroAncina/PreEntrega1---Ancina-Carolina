@@ -11,12 +11,11 @@ Creando el repositorio remoto:
 git clone https://github.com/CaroAncina/PreEntrega2-Ancina-Carolina
 ```
 Conecta el repositorio con el equipo local:
-
+```
 git remote add origin [https://github.com/CaroAncina/ProyectoFinal-AncinaCarolina](https://caroancina.github.io/ProyectoFinal-AncinaCarolina/index.html)
-
 ```
 Trae los archivos del repositorio a GitHub
 ```
 git pull -u origin main
-
+```
 
