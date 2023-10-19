@@ -18,5 +18,5 @@ git remote add origin [https://github.com/CaroAncina/ProyectoFinal-AncinaCarolin
 Trae los archivos del repositorio a GitHub
 ```
 git pull -u origin main
-```
+
 
