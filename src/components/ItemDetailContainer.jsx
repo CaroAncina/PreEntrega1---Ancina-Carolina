@@ -1,11 +1,9 @@
 import React from 'react'
-import "../styles/main.css"
-import "../styles/itemlistcontainer.css"
-import Itemlist from './Itemlist'
+import ItemDetail from './ItemDetail';
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
 
-  const productos = [
+ const productos = [
     { id: "01", name: "Torta", description: "Descripcion", categoria: "Tortas", price: 5760 },
     { id: "02", name: "Tarta frutal", description: "Descripcion", categoria: "Tartas", price: 3000 },
     { id: "03", name: "Rosca de Pascua", description: "Descripcion", categoria: "Variedades", price: 1800 },
@@ -40,10 +38,10 @@ const ItemListContainer = () => {
 
   return (
     <>
-      <Itemlist productos={productos} />
+      <ItemDetail productos={productos} />
     </>
 
   )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer

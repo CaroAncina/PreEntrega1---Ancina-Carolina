@@ -1,8 +1,25 @@
-# React + Vite
+# Proyecto ReactJS-AncinaCarolina
+## **Antojitos|Tienda de comestibles**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyecto del curso de React JS de CoderHouse. Es un sitio Web que consta de 5 paginas, donde se da a conocer un ecommerce sobre un emprendimiento gastronomico familiar de varios años. En este caso, utilizo el proyecto original desde los cursos de Desarrollo web y JS.
 
-Currently, two official plugins are available:
+### **Instalacion**:wrench:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+Creando el repositorio remoto:
+```
+git clone https://github.com/CaroAncina/PreEntrega2-Ancina-Carolina
+```
+
+
+Conecta el repositorio con el equipo local:
+```
+git remote add origin https://github.com/CaroAncina/PreEntrega2-Ancina-Carolina/tree/main
+```
+
+
+Trae los archivos del repositorio a GitHub:
+```
+git pull -u origin main
+```
+
