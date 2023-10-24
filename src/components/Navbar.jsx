@@ -11,59 +11,53 @@ const Navbar = () => {
 
             <Box className="logo">
                 <Link to={"/Home"}>
-                    <h1>Antojitos</h1>
+                    <h1>Antojitos (logo)</h1>
                 </Link>
             </Box>
 
             <Spacer />
-            <div className='nav'>
-                <Box className="list">
-                    <h1>Inicio</h1>
-                </Box>
-                <Spacer />
-                <Box className="list">
-                    <h1>Quienes Somos</h1>
-                </Box>
-                <Spacer />
-                <Box className="list">
-                    <h1>Productos</h1>
-                </Box>
-                <Spacer />
-                <Box className="list">
 
-                    <Link to={"/"}>
-                        <Menu>
+            <Box className="list">
+                <Link to={"/"}>
+                    <Menu>
+                        <div className="center-menu-button">
                             <MenuButton>
                                 Tienda
                             </MenuButton>
-                            <MenuList>
-                                <MenuItem>Todos nuestros productos</MenuItem>
+                        </div>
+
+                        <MenuList>
+                            <Link to={"/categoria/Tortas"}>
                                 <MenuItem>Tortas</MenuItem>
+                            </Link>
+                            <Link to={"/categoria/Tartas"}>
                                 <MenuItem>Tartas</MenuItem>
+                            </Link>
+
+                            <Link to={"/categoria/Postres"}>
                                 <MenuItem>Postres</MenuItem>
+                            </Link>
+
+                            <Link to={"/categoria/Variedades"}>
                                 <MenuItem>Variedades</MenuItem>
-                            </MenuList>
-                        </Menu>
-                    </Link>
-                </Box>
+                            </Link>
+                        </MenuList>
 
-                <Spacer />
-                <Box className="list">
-                    <h1>Contacto</h1>
-                </Box>
-                <Spacer />
+                    </Menu>
+                </Link>
+            </Box>
 
+            <Spacer />
 
-                <Box className="list">
-                    <Link to={"/Cart"}>
-                        <CartWidget />
-                    </Link>
-                </Box>
-            </div>
+            <Box className="list">
+                <Link to={"/Cart"}>
+                    <CartWidget />
+                </Link>
+            </Box>
+
 
 
         </Flex>
-
     )
 }
 

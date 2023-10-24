@@ -3,8 +3,6 @@ import Item from './Item'
 
 const Itemlist = ({ productos }) => {
 
-    console.log(productos)
-
     return (
         <div>
             {productos.map((p) => {
@@ -15,6 +13,7 @@ const Itemlist = ({ productos }) => {
                         name={p.name}
                         description={p.description}
                         price={p.price}
+                        category={p.category}
                     />
                 )
             })

@@ -1,5 +1,5 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
+import React, {useState} from 'react'
 import { Card, CardBody, CardFooter, Text, Stack, Heading, Divider, ButtonGroup, Button } from '@chakra-ui/react'
 
 const ItemDetail = ({ productos }) => {
@@ -7,6 +7,18 @@ const ItemDetail = ({ productos }) => {
     const { id } = useParams()
 
     const filtrarproductos = productos.filter((producto) => producto.id == id)
+
+    const [count, setCount] = useState(0);
+
+    const increment = () => {
+        setCount(count + 1);
+    };
+
+    const decrement = () => {
+        if (count > 0) {
+            setCount(count - 1);
+        }
+    };
 
     return (
         <>
@@ -23,12 +35,16 @@ const ItemDetail = ({ productos }) => {
                     </CardBody>
                     <Divider />
                     <CardFooter>
-                        <ButtonGroup spacing='2'>
-                            <Button variant='solid' colorScheme='blue'>
-                                Contador
-                            </Button>
-                        </ButtonGroup>
-                    </CardFooter>
+                    <ButtonGroup spacing='2'>
+                        <Button variant='outline' colorScheme='green' onClick={decrement}>
+                            -
+                        </Button>
+                        <Text>Cantidad: {count}</Text>
+                        <Button variant='outline' colorScheme='green' onClick={increment}>
+                            +
+                        </Button>
+                    </ButtonGroup>
+                </CardFooter>
                 </Card>
             ))}
         </>

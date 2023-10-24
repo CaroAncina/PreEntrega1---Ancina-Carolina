@@ -19,10 +19,11 @@ const App = () => {
 
         <Routes>
 
-          <Route exact path='/Home' element={<Home />} />
+          <Route exact path='/home' element={<Home />} />
           <Route exact path='/' element={<ItemListContainer />} />
-          <Route exact path='/Cart' element={<Cart />} />
+          <Route exact path='/cart' element={<Cart />} />
           <Route exact path='/product/:id' element={<ItemDetailContainer />} />
+          <Route exact path='/categoria/:categoryid' element={<ItemListContainer />} />
 
 
         </Routes>
