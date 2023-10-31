@@ -21,7 +21,8 @@ const ItemDetail = ({ productos }) => {
     };
 
     return (
-        <>
+        <> <div className='item-detail'>
+
             {filtrarproductos.map((p) => (
                 <Card maxW='sm' key={p.id}>
                     <CardBody>
@@ -47,6 +48,8 @@ const ItemDetail = ({ productos }) => {
                 </CardFooter>
                 </Card>
             ))}
+
+        </div>
         </>
     );
 };

@@ -1,0 +1,21 @@
+.product-card {
+    padding: 10px;
+    border-radius: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .075rem;
+}
+
+.item-product {
+    margin: 2px;
+    padding: 2px;
+}
+
+.image-product{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
