@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import ItemDetailContainer from './components/ItemDetailContainer'
+import {ShoppingCartContext}  from './context/ShoppingCartContext'
 
 
 const App = () => {
@@ -14,19 +15,17 @@ const App = () => {
     <div>
 
       <BrowserRouter>
-      
-        <Navbar />
 
-        <Routes>
-
-          <Route exact path='/home' element={<Home />} />
-          <Route exact path='/' element={<ItemListContainer />} />
-          <Route exact path='/cart' element={<Cart />} />
-          <Route exact path='/product/:id' element={<ItemDetailContainer />} />
-          <Route exact path='/categoria/:categoryid' element={<ItemListContainer />} />
-
-
-        </Routes>
+        <ShoppingCartContext>
+          <Navbar />
+          <Routes>
+            <Route exact path='/home' element={<Home />} />
+            <Route exact path='/' element={<ItemListContainer />} />
+            <Route exact path='/cart' element={<Cart />} />
+            <Route exact path='/product/:id' element={<ItemDetailContainer />} />
+            <Route exact path='/categoria/:categoryid' element={<ItemListContainer />} />
+          </Routes>
+        </ShoppingCartContext>
 
       </BrowserRouter>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import "../styles/navbar.css"
 import CartWidget from './CartWidget'
-import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer } from '@chakra-ui/react'
+import { Menu, MenuButton, MenuList, MenuItem, Flex, Box, Spacer,Image } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
@@ -11,7 +11,7 @@ const Navbar = () => {
 
             <Box className="logo">
                 <Link to={"/Home"}>
-                    <h1>Antojitos (logo)</h1>
+                <Image src="/public/logoantojitos.png" alt="Logo Antojitos" />
                 </Link>
             </Box>
 
