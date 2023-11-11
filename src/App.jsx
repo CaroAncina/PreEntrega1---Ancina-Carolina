@@ -6,7 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Cart from './components/Cart'
 import ItemDetailContainer from './components/ItemDetailContainer'
-import {ShoppingCartContext}  from './context/ShoppingCartContext'
+import { ShoppingCartContext } from './context/ShoppingCartContext'
+import SendOrders from './components/SendOrders'
 
 
 const App = () => {
@@ -14,7 +15,6 @@ const App = () => {
     <div>
 
       <BrowserRouter>
-
         <ShoppingCartContext>
           <Navbar />
           <Routes>
@@ -23,6 +23,7 @@ const App = () => {
             <Route exact path='/cart' element={<Cart />} />
             <Route exact path='/product/:id' element={<ItemDetailContainer />} />
             <Route exact path='/categoria/:categoryid' element={<ItemListContainer />} />
+            <Route exact path='/send-orders' element={<SendOrders />} />
           </Routes>
         </ShoppingCartContext>
 

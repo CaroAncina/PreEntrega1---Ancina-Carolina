@@ -53,7 +53,7 @@ const Cart = () => {
         <p>Precio Total: ${totalPrice}</p>
         <button onClick={clear}>Vaciar Carrito</button>
         <Link to="/">Volver a la tienda</Link>
-        <Link to="/">Continuar la compra</Link>
+        <Link to="/send-orders">Continuar la compra</Link>
       </Box>
     </div>
   );
