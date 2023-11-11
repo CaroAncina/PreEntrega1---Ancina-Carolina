@@ -2,7 +2,6 @@ import React from 'react'
 import "../src/styles/main.css"
 import Navbar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer'
-import Item from './components/Item'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './components/Home'
 import Cart from './components/Cart'

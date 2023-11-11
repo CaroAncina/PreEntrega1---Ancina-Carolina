@@ -1,54 +1,50 @@
-import { useParams, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
+import ItemCount from './ItemCount';
 import { useCart } from '../context/ShoppingCartContext';
-import { Card, CardBody, CardFooter, Text, Stack, Heading, Divider, ButtonGroup, Button, Image, Flex, Box, } from '@chakra-ui/react'
+import { Card, CardBody, CardFooter, Text, Stack, Heading, Divider, Button, Image, Flex } from '@chakra-ui/react'
 
 const ItemDetail = ({ productos }) => {
-
-    const { id } = useParams()
     const { addItem } = useCart();
-
-    const filtrarproductos = productos.filter((producto) => producto.id === id)
-
     const [count, setCount] = useState(0);
+
+    const handleDecrement = () => {
+        setCount((prevCount) => Math.max(prevCount - 1, 0));
+    };
+
+    const handleIncrement = () => {
+        setCount((prevCount) => prevCount + 1);
+    };
+
+    const handleAddToCart = () => {
+        addItem(productos,count);
+    };
 
     return (
         <> <div className='item-detail'>
+            <Flex>
+                <Card maxW='sm' >
+                    <CardBody>
+                        <Stack mt='6' spacing='3'>
+                            <Image className='image-product' src={productos.image} alt={productos.name} borderRadius='lg' />
+                            <Heading size='md'>{productos.name}</Heading>
+                            <Text>{productos.description}</Text>
+                            <Text color='blue.600' fontSize='2xl'>
+                                ${productos.price}
+                            </Text>
+                        </Stack>
+                    </CardBody>
 
-            {filtrarproductos.map((p) => (
-                <Flex>
-                    <Card maxW='sm' key={p.id}>
-                        <CardBody>
-                            <Stack mt='6' spacing='3'>
-                                <Image className='image-product' src={p.image} alt={p.name} borderRadius='lg' />
-                                <Heading size='md'>{p.name}</Heading>
-                                <Text>{p.description}</Text>
-                                <Text color='blue.600' fontSize='2xl'>
-                                    ${p.price}
-                                </Text>
-                            </Stack>
-                        </CardBody>
+                    <Divider />
 
-                        <Divider />
-
-                        <CardFooter>
-                            <ButtonGroup spacing='2'>
-                                <Button variant='outline' colorScheme='green' onClick={() => setCount(count - 1)}
-                                    m={1}
-                                >-</Button>
-                                <Button m={1}>{count}   </Button>
-                                <Button variant='outline' colorScheme='green' onClick={() => setCount(count + 1)}
-                                    m={1}
-                                >+</Button>
-                                <Link to={"/Cart"}>
-                                    <Button onClick={() => addItem(p, count)}>Agregar al carrito</Button>
-                                </Link>
-                            </ButtonGroup>
-                        </CardFooter>
-                    </Card>
-                </Flex>
-            ))}
-
+                    <CardFooter>
+                        <ItemCount initial={count} onDecrement={handleDecrement} onIncrement={handleIncrement} />
+                        <Link to={"/"}>
+                            <Button onClick={handleAddToCart}>Agregar al carrito</Button>
+                        </Link>
+                    </CardFooter>
+                </Card>
+            </Flex>
         </div>
         </>
     );
