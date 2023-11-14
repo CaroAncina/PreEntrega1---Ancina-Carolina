@@ -1,8 +1,8 @@
 .item-list {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 5fr);
+    gap: 1rem;
     align-items: start;
 
 }

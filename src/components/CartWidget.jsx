@@ -6,15 +6,10 @@ import { Badge, Box, Flex, Divider } from '@chakra-ui/react'
 const CartWidget = () => {
 
     const { cart } = useCart();
-
-    // Calcular el número total de elementos en el carrito
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-
-    // Verificar si hay elementos en el carrito
     const cartitems = totalItems > 0;
 
     return (
-
         cartitems ? (
             <Flex>
                 <Box>

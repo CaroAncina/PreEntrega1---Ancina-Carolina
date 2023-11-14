@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { collection, addDoc, getFirestore } from 'firebase/firestore';
-import { FormControl, Input, FormLabel, FormHelperText, Button } from '@chakra-ui/react';
+import { FormControl, Input, FormLabel, Button } from '@chakra-ui/react';
 
 const SendOrders = () => {
   const [nombre, setNombre] = useState('');
@@ -33,8 +33,7 @@ const SendOrders = () => {
           <Input type="text" placeholder="Nombre medium size" size="md" onChange={(e) => setNombre(e.target.value)} />
           <FormLabel>Email address</FormLabel>
           <Input type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-          <FormHelperText>We'll never share your email.</FormHelperText>
-
+          
           <Button type="submit" colorScheme="blue">
             Enviar
           </Button>

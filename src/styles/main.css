@@ -1,22 +1,18 @@
-@charset "UTF-8";
 /****selector universal****/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/****ESTILOS GLOBALES****/
-body {
-  background-color: #fbf5fa;
-  font-family: "Zilla Slab", serif;
-  display: grid;
-  min-height: 100vh;
-  grid-template-rows: auto 1fr auto;
-}
-body a {
-  text-decoration: none;
-}
-
-
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /****estilos globales****/
+  body {
+    background-color: #fbf5fa;
+    font-family: "Zilla Slab", serif;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+  }
+  body a {
+    text-decoration: none;
+  }
