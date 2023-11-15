@@ -26,7 +26,6 @@ const ItemDetail = ({ productos }) => {
         }
     };
 
-
     useEffect(() => {
         const timeoutId = setTimeout(() => setShowAlert(false), 3000);
         return () => clearTimeout(timeoutId);
@@ -41,7 +40,7 @@ const ItemDetail = ({ productos }) => {
                             <Stack mt='6' spacing='3'>
                                 <Image className='image-product' src={productos.image} alt={productos.name} borderRadius='lg' />
                                 <Heading size='md'>{productos.name}</Heading>
-                                <Text>{productos.description}</Text>
+                                <Text fontSize="md" fontWeight='semibold' >{productos.description}</Text>
                                 <Text color='blue.600' fontSize='2xl'>
                                     ${productos.price}
                                 </Text>
@@ -57,10 +56,10 @@ const ItemDetail = ({ productos }) => {
 
                             <Box m='10px'>
                                 <Link to={"/"}>
-                                    <Button m='1px' backgroundColor='#7ddeda' >Volver a la tienda</Button>
+                                    <Button m='1px' backgroundColor='#7ddeda'>Volver a la tienda</Button>
                                 </Link>
                                 <Link onClick={handleAddToCart}>
-                                    <Button m='2px' backgroundColor='#7ddeda' >Agregar al carrito</Button>
+                                    <Button m='2px' backgroundColor='#7ddeda'>Agregar al carrito</Button>
                                 </Link>
                             </Box>
                         </CardFooter>

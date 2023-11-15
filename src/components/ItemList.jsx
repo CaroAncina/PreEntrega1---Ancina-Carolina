@@ -7,9 +7,8 @@ const Itemlist = ({ productos }) => {
     return (
         <div className='item-list'>
             {productos.map((p) => (
-                <Container  >
+                <Container key={p.id}>
                     <Item
-                        key={p.id}
                         id={p.id}
                         name={p.name}
                         description={p.description}
@@ -22,6 +21,5 @@ const Itemlist = ({ productos }) => {
         </div>
     );
 }
-
 
 export default React.memo(Itemlist);

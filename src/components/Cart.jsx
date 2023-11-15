@@ -4,7 +4,7 @@ import { useCart } from '../context/ShoppingCartContext';
 import { Box, Card, Heading, CardBody, CardHeader, Button, Text } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
 import "../styles/cart.css"
-import '../styles/main.css'
+
 
 const Cart = () => {
   const { cart, removeItem, clear } = useCart();
@@ -16,27 +16,27 @@ const Cart = () => {
   );
 
   return (
-    <div className="cart-container">
-      <Card>
+    <div className='cart-products'>
+      <Card backgroundColor='#fbf5fa' >
         <CardHeader>
-          <Heading size="md">Tu carrito de compras</Heading>
+          <Heading size="md">Carro de compras</Heading>
         </CardHeader>
 
-        <CardBody>
+        <CardBody backgroundColor='#fbf5fa' >
           {cart.length === 0 ? (
-            <div>
+            <div className='cart-text'>
               <p>Tu carrito de compras está vacío.</p>
             </div>
           ) : (
             <div>
               <ul className='cart-list'>
                 {cart.map((item) => (
-                  <li key={item.id} className='cart-item'>
+                  <li key={item.id} >
                     <Box className='cart-items'>
                       <p>{item.name}</p>
                       <p>Cantidad: {item.quantity}</p>
                       <p>Precio: ${item.price}</p>
-                      <Button colorScheme="red" onClick={() => removeItem(item.id)}>
+                      <Button colorScheme="red" onClick={() => { clear(); removeItem(item.id) }}>
                         <DeleteIcon />
                       </Button>
                     </Box>
@@ -48,13 +48,15 @@ const Cart = () => {
         </CardBody>
       </Card>
 
-      <Box display="flex" alignItems="center" justifyContent="space-evenly" mt="4">
+      <Box display="flex" alignItems="center" justifyContent="space-evenly" mt="4" backgroundColor='#fbf5fa' m='10px' >
         <Text fontSize='2xl' as='i' > Cantidad de productos: {totalItems}</Text>
         <Text fontSize='2xl' as='i' > Precio Total: ${totalPrice} </Text>
-        <Button backgroundColor='#E9D8FD' onClick={clear}>Vaciar Carrito</Button>
-        <Link to="/">
-          <Button backgroundColor='#E9D8FD' > Volver a la tienda </Button>
-        </Link>
+        <Button backgroundColor='#E9D8FD' color='#000' onClick={clear}>
+          Vaciar Carrito
+        </Button>
+        <Button backgroundColor='#E9D8FD' as={Link} to="/">
+          Volver a la tienda
+        </Button>
         <Link to={cart.length > 0 ? "/send-orders" : "/"} >
           <Button backgroundColor='#E9D8FD' >
             Continuar la compra

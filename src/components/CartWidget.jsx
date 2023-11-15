@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCart } from '../context/ShoppingCartContext';
-import { Link } from 'react-router-dom';
 import { Badge, Box, Flex, Divider } from '@chakra-ui/react'
 
 const CartWidget = () => {
@@ -19,7 +18,7 @@ const CartWidget = () => {
                 </Box>
                 <Divider />
                 <Box>
-                    <Badge className="cart-number" colorScheme='purple'>{totalItems}</Badge>
+                    <Badge className="cart-number" colorScheme='purple' >{totalItems}</Badge>
                 </Box>
             </Flex>
         ) : null

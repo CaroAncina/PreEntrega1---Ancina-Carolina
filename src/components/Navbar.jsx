@@ -10,7 +10,7 @@ const Navbar = () => {
         <Flex className='header'>
 
             <Box className="logo">
-                <Link to={"/Home"}>
+                <Link to={"/home"}>
                 <Image src="/public/logoantojitos.png" alt="Logo Antojitos" />
                 </Link>
             </Box>
@@ -21,7 +21,7 @@ const Navbar = () => {
                 <Link to={"/"}>
                     <Menu>
                         <div className="center-menu-button">
-                            <MenuButton>
+                            <MenuButton fontSize="3xl" fontWeight="semibold">
                                 Tienda
                             </MenuButton>
                         </div>
